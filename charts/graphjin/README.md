@@ -9,7 +9,7 @@ graphjin Helm Chart
 | Key | Type | Default | Description |
 |-----|------|---------|-------------|
 | affinity | object | `{}` |  |
-| config | string | `"database:\n  type: postgres\n  host: postgres-postgresql\n  port: 5432\n  dbname: postgres\n  user: postgres\n  password: postgres\n  ping_timeout: 1m"` |  |
+| config | string | `"database:\n  type: postgres\n  host: postgres-postgresql\n  port: 5432\n  dbname: postgres\n  user: postgres\n  password: postgres\n  ping_timeout: 1m"` | https://github.com/dosco/graphjin/wiki/Guide-to-Config-Files |
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"dosco/graphjin"` |  |
