@@ -1,0 +1,9 @@
+apiVersion: v2
+name: graphjin
+description: graphjin Helm Chart
+
+type: application
+
+version: 0.0.1
+
+appVersion: "0.16.48"

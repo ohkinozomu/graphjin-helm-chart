@@ -1,0 +1,14 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "graphjin.fullname" . }}-test-connection"
+  labels:
+    {{- include "graphjin.labels" . | nindent 4 }}
+  annotations:
+    "helm.sh/hook": test
+spec:
+  containers:
+    - name: curl
+      image: curlimages/curl
+      args: ['{{ include "graphjin.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never
