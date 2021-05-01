@@ -54,6 +54,8 @@ tolerations: []
 
 affinity: {}
 
+additionalContainers: []
+
 # -- https://github.com/dosco/graphjin/wiki/Guide-to-Config-Files
 config: |
   database:

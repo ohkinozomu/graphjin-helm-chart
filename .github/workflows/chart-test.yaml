@@ -20,6 +20,7 @@ jobs:
       - name: Dry run
         run: |
           helm install --dry-run --debug graphjin ./charts/graphjin
+          helm install --dry-run --debug graphjin ./charts/graphjin --set additionalContainers="- name: myapp-container\n  image: busybox\n  command: ['echo ok']"
 
       - name: Install PostgreSQL
         run: |

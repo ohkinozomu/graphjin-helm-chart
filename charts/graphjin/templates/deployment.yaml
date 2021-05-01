@@ -53,6 +53,9 @@ spec:
               mountPath: /config/dev.yaml
               subPath: dev.yaml
               readOnly: true
+        {{- with .Values.additionalContainers }}
+        {{- toYaml .Values.additionalContainers | indent 8 }}
+        {{- end }}
       volumes:
         - name: config
           secret:
