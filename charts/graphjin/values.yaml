@@ -64,3 +64,6 @@ config: |
     user: postgres
     password: postgres
     ping_timeout: 1m
+
+# -- healthPath change the health check path. Defaults to /health
+healthPath: "/health"

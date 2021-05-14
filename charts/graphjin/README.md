@@ -1,6 +1,6 @@
 # graphjin
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.16.50](https://img.shields.io/badge/AppVersion-0.16.50-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.16.50](https://img.shields.io/badge/AppVersion-0.16.50-informational?style=flat-square)
 
 graphjin Helm Chart
 
@@ -17,6 +17,7 @@ graphjin Helm Chart
 | affinity | object | `{}` |  |
 | config | string | `"database:\n  type: postgres\n  host: postgres-postgresql\n  port: 5432\n  dbname: postgres\n  user: postgres\n  password: postgres\n  ping_timeout: 1m\n"` | https://github.com/dosco/graphjin/wiki/Guide-to-Config-Files |
 | fullnameOverride | string | `""` |  |
+| healthPath | string | `"/health"` | healthPath change the health check path. Defaults to /health |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"dosco/graphjin"` |  |
 | image.tag | string | `"v0.16.50"` | Overrides the image tag whose default is the chart appVersion. |
