@@ -1,6 +1,6 @@
 # graphjin
 
-![Version: 0.0.2](https://img.shields.io/badge/Version-0.0.2-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.16.50](https://img.shields.io/badge/AppVersion-0.16.50-informational?style=flat-square)
+![Version: 0.0.3](https://img.shields.io/badge/Version-0.0.3-informational?style=flat-square) ![Type: application](https://img.shields.io/badge/Type-application-informational?style=flat-square) ![AppVersion: 0.16.52](https://img.shields.io/badge/AppVersion-0.16.52-informational?style=flat-square)
 
 graphjin Helm Chart
 
@@ -19,7 +19,7 @@ graphjin Helm Chart
 | fullnameOverride | string | `""` |  |
 | image.pullPolicy | string | `"IfNotPresent"` |  |
 | image.repository | string | `"dosco/graphjin"` |  |
-| image.tag | string | `"v0.16.50"` | Overrides the image tag whose default is the chart appVersion. |
+| image.tag | string | `"v0.16.52"` | Overrides the image tag whose default is the chart appVersion. |
 | imagePullSecrets | list | `[]` |  |
 | nameOverride | string | `""` |  |
 | nodeSelector | object | `{}` |  |
