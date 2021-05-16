@@ -4,9 +4,9 @@ description: graphjin Helm Chart
 
 type: application
 
-version: 0.0.3
+version: 0.0.4
 
-appVersion: "0.16.52"
+appVersion: "0.16.58"
 
 maintainers:
   - name: ohkinozomu
