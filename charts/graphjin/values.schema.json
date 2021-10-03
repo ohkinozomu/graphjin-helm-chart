@@ -1,0 +1,320 @@
+{
+	"$schema": "https://json-schema.org/draft/2020-12/schema",
+	"$id": "https://github.com/ohkinozomu/graphjin-helm-chart",
+	"type": "object",
+	"title": "graphjin helm chart schema",
+	"default": {},
+	"examples": [
+		{
+			"replicaCount": 1,
+			"image": {
+				"repository": "dosco/graphjin",
+				"pullPolicy": "IfNotPresent",
+				"tag": "v0.16.87"
+			},
+			"imagePullSecrets": [],
+			"nameOverride": "",
+			"fullnameOverride": "",
+			"serviceAccount": {
+				"create": true,
+				"annotations": {},
+				"name": ""
+			},
+			"podAnnotations": {},
+			"podSecurityContext": {},
+			"securityContext": {},
+			"service": {
+				"type": "ClusterIP",
+				"port": 8080
+			},
+			"resources": {},
+			"nodeSelector": {},
+			"tolerations": [],
+			"affinity": {},
+			"config": "database:\n  type: postgres\n  host: postgres-postgresql\n  port: 5432\n  dbname: postgres\n  user: postgres\n  password: postgres\n  ping_timeout: 1m\n"
+		}
+	],
+	"required": [
+		"replicaCount",
+		"image",
+		"imagePullSecrets",
+		"nameOverride",
+		"fullnameOverride",
+		"serviceAccount",
+		"podAnnotations",
+		"podSecurityContext",
+		"securityContext",
+		"service",
+		"resources",
+		"nodeSelector",
+		"tolerations",
+		"affinity",
+		"config"
+	],
+	"properties": {
+		"replicaCount": {
+			"$id": "#/properties/replicaCount",
+			"type": "integer",
+			"title": "The replicaCount schema",
+			"default": 0,
+			"examples": [
+				1
+			]
+		},
+		"image": {
+			"$id": "#/properties/image",
+			"type": "object",
+			"title": "The image schema",
+			"default": {},
+			"examples": [
+				{
+					"repository": "dosco/graphjin",
+					"pullPolicy": "IfNotPresent",
+					"tag": "v0.16.87"
+				}
+			],
+			"required": [
+				"repository",
+				"pullPolicy",
+				"tag"
+			],
+			"properties": {
+				"repository": {
+					"$id": "#/properties/image/properties/repository",
+					"type": "string",
+					"title": "The repository schema",
+					"default": "",
+					"examples": [
+						"dosco/graphjin"
+					]
+				},
+				"pullPolicy": {
+					"$id": "#/properties/image/properties/pullPolicy",
+					"type": "string",
+					"title": "The pullPolicy schema",
+					"default": "",
+					"examples": [
+						"IfNotPresent"
+					]
+				},
+				"tag": {
+					"$id": "#/properties/image/properties/tag",
+					"type": "string",
+					"title": "The tag schema",
+					"default": "",
+					"examples": [
+						"v0.16.87"
+					]
+				}
+			},
+			"additionalProperties": true
+		},
+		"imagePullSecrets": {
+			"$id": "#/properties/imagePullSecrets",
+			"type": "array",
+			"title": "The imagePullSecrets schema",
+			"default": [],
+			"examples": [
+				[]
+			],
+			"additionalItems": true,
+			"items": {
+				"$id": "#/properties/imagePullSecrets/items"
+			}
+		},
+		"nameOverride": {
+			"$id": "#/properties/nameOverride",
+			"type": "string",
+			"title": "The nameOverride schema",
+			"default": "",
+			"examples": [
+				""
+			]
+		},
+		"fullnameOverride": {
+			"$id": "#/properties/fullnameOverride",
+			"type": "string",
+			"title": "The fullnameOverride schema",
+			"default": "",
+			"examples": [
+				""
+			]
+		},
+		"serviceAccount": {
+			"$id": "#/properties/serviceAccount",
+			"type": "object",
+			"title": "The serviceAccount schema",
+			"default": {},
+			"examples": [
+				{
+					"create": true,
+					"annotations": {},
+					"name": ""
+				}
+			],
+			"required": [
+				"create",
+				"annotations",
+				"name"
+			],
+			"properties": {
+				"create": {
+					"$id": "#/properties/serviceAccount/properties/create",
+					"type": "boolean",
+					"title": "The create schema",
+					"default": false,
+					"examples": [
+						true
+					]
+				},
+				"annotations": {
+					"$id": "#/properties/serviceAccount/properties/annotations",
+					"type": "object",
+					"title": "The annotations schema",
+					"default": {},
+					"examples": [
+						{}
+					],
+					"required": [],
+					"additionalProperties": true
+				},
+				"name": {
+					"$id": "#/properties/serviceAccount/properties/name",
+					"type": "string",
+					"title": "The name schema",
+					"default": "",
+					"examples": [
+						""
+					]
+				}
+			},
+			"additionalProperties": true
+		},
+		"podAnnotations": {
+			"$id": "#/properties/podAnnotations",
+			"type": "object",
+			"title": "The podAnnotations schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"podSecurityContext": {
+			"$id": "#/properties/podSecurityContext",
+			"type": "object",
+			"title": "The podSecurityContext schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"securityContext": {
+			"$id": "#/properties/securityContext",
+			"type": "object",
+			"title": "The securityContext schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"service": {
+			"$id": "#/properties/service",
+			"type": "object",
+			"title": "The service schema",
+			"default": {},
+			"examples": [
+				{
+					"type": "ClusterIP",
+					"port": 8080
+				}
+			],
+			"required": [
+				"type",
+				"port"
+			],
+			"properties": {
+				"type": {
+					"$id": "#/properties/service/properties/type",
+					"type": "string",
+					"title": "The type schema",
+					"default": "",
+					"examples": [
+						"ClusterIP"
+					]
+				},
+				"port": {
+					"$id": "#/properties/service/properties/port",
+					"type": "integer",
+					"title": "The port schema",
+					"default": 0,
+					"examples": [
+						8080
+					]
+				}
+			},
+			"additionalProperties": true
+		},
+		"resources": {
+			"$id": "#/properties/resources",
+			"type": "object",
+			"title": "The resources schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"nodeSelector": {
+			"$id": "#/properties/nodeSelector",
+			"type": "object",
+			"title": "The nodeSelector schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"tolerations": {
+			"$id": "#/properties/tolerations",
+			"type": "array",
+			"title": "The tolerations schema",
+			"default": [],
+			"examples": [
+				[]
+			],
+			"additionalItems": true,
+			"items": {
+				"$id": "#/properties/tolerations/items"
+			}
+		},
+		"affinity": {
+			"$id": "#/properties/affinity",
+			"type": "object",
+			"title": "The affinity schema",
+			"default": {},
+			"examples": [
+				{}
+			],
+			"required": [],
+			"additionalProperties": true
+		},
+		"config": {
+			"$id": "#/properties/config",
+			"type": "string",
+			"title": "The config schema",
+			"default": "",
+			"examples": [
+				"database:\n  type: postgres\n  host: postgres-postgresql\n  port: 5432\n  dbname: postgres\n  user: postgres\n  password: postgres\n  ping_timeout: 1m\n"
+			]
+		}
+	},
+	"additionalProperties": true
+}

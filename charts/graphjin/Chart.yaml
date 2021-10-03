@@ -4,7 +4,7 @@ description: graphjin Helm Chart
 
 type: application
 
-version: 0.0.8
+version: 0.0.9
 
 appVersion: "0.16.87"
 
