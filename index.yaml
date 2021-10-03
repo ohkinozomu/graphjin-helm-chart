@@ -3,6 +3,19 @@ entries:
   graphjin:
   - apiVersion: v2
     appVersion: 0.16.87
+    created: "2021-10-03T03:33:46.68506793Z"
+    description: graphjin Helm Chart
+    digest: b95a0e3cf1c01f49f0115b5a844989b2e21067c9249aaec1bbcec5b9e9bd4179
+    maintainers:
+    - email: nozomunoise@gmail.com
+      name: ohkinozomu
+    name: graphjin
+    type: application
+    urls:
+    - https://github.com/ohkinozomu/graphjin-helm-chart/releases/download/graphjin-0.0.9/graphjin-0.0.9.tgz
+    version: 0.0.9
+  - apiVersion: v2
+    appVersion: 0.16.87
     created: "2021-07-05T21:37:07.537681235Z"
     description: graphjin Helm Chart
     digest: 7628d2c9ef670698562a5c03a48626ad664eb0191cc9c1bbd44f8a78781e8f1d
@@ -102,4 +115,4 @@ entries:
     urls:
     - https://github.com/ohkinozomu/graphjin-helm-chart/releases/download/graphjin-0.0.1/graphjin-0.0.1.tgz
     version: 0.0.1
-generated: "2021-07-05T21:37:07.537714638Z"
+generated: "2021-10-03T03:33:46.685133435Z"
